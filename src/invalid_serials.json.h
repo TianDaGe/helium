@@ -5,8 +5,8 @@
 
 
 
-#ifndef 401KCOIN_INVALID_SERIALS_JSON_H
-#define 401KCOIN_INVALID_SERIALS_JSON_H
+#ifndef P401KCOIN_INVALID_SERIALS_JSON_H
+#define P401KCOIN_INVALID_SERIALS_JSON_H
 
 #include <string>
 
@@ -16,4 +16,4 @@ std::string LoadInvalidSerials()
     return str;
 }
 
-#endif //401KCOIN_INVALID_SERIALS_JSON_H
+#endif //P401KCOIN_INVALID_SERIALS_JSON_H

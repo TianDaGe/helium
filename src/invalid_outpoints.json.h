@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef 401KCOIN_INVALID_OUTPOINTS_JSON_H
-#define 401KCOIN_INVALID_OUTPOINTS_JSON_H
+#ifndef P401KCOIN_INVALID_OUTPOINTS_JSON_H
+#define P401KCOIN_INVALID_OUTPOINTS_JSON_H
 #include <string>
 
 std::string LoadInvalidOutPoints()
@@ -13,4 +13,4 @@ std::string LoadInvalidOutPoints()
     return str;
 }
 
-#endif //401KCOIN_INVALID_OUTPOINTS_JSON_H
+#endif //P401KCOIN_INVALID_OUTPOINTS_JSON_H
