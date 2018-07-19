@@ -2300,7 +2300,7 @@ public:
         pchMessageStart[2] = 0xc0;
         pchMessageStart[3] = 0xe0;
         vAlertPubKey = ParseHex("0x"); // Disabled
-        nDefaultPort = 9009;
+        nDefaultPort = 5005;
         bnProofOfWorkLimit = ~uint256(0) >> 20; // 401KCoin starting difficulty is 1 / 2^12
         nSubsidyHalvingInterval = 210240;
         nMaxReorganizationDepth = 100;
@@ -2455,7 +2455,7 @@ public:
         vAlertPubKey = ParseHex("");
         bnProofOfWorkLimit = ~uint256(0) >> 1; // 0x207fffff, 401KCoin testnet starting difficulty
         nSubsidyHalvingInterval = 210240;
-        nDefaultPort = 19009;
+        nDefaultPort = 15005;
         nEnforceBlockUpgradeMajority = 51;
         nRejectBlockOutdatedMajority = 75;
         nToCheckBlockUpgradeMajority = 100;

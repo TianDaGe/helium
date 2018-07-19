@@ -3494,8 +3494,8 @@ https://www.transifex.com/401kcoin-project/401kcoin-project-translations</transl
         <translation>Você deve especificar uma masternodeprivkey na configuração. Favor verificar o manual para obter ajuda.</translation>
     </message>
     <message>
-        <source>(9009 could be used only on mainnet)</source>
-        <translation>(9009 could be used only on mainnet)</translation>
+        <source>(5005 could be used only on mainnet)</source>
+        <translation>(5005 could be used only on mainnet)</translation>
     </message>
     <message>
         <source>(default: %s)</source>
@@ -3506,8 +3506,8 @@ https://www.transifex.com/401kcoin-project/401kcoin-project-translations</transl
         <translation>(padrão: 1)</translation>
     </message>
     <message>
-        <source>(must be 9009 for mainnet)</source>
-        <translation>(deve ser 9009 para mainnet)</translation>
+        <source>(must be 5005 for mainnet)</source>
+        <translation>(deve ser 5005 para mainnet)</translation>
     </message>
     <message>
         <source>Accept connections from outside (default: 1 if no -proxy or -connect)</source>
