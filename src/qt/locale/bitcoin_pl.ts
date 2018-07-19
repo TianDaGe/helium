@@ -148,8 +148,8 @@
         <translation>Czy na pewno chcesz zakodować portfel?</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR HLM&lt;/b&gt;!</source>
-        <translation>Ostrzeżenie: Jeżeli zakodujesz portfel i stracisz do niego hasło , UTRACISZ WSZYSTKIE HLM!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR 401K&lt;/b&gt;!</source>
+        <translation>Ostrzeżenie: Jeżeli zakodujesz portfel i stracisz do niego hasło , UTRACISZ WSZYSTKIE 401K!</translation>
     </message>
     <message>
         <source>Wallet encrypted</source>
@@ -227,8 +227,8 @@
         <translation>Zakodowany klucz:</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Helium address</source>
-        <translation>Zatwierdź wiadomość, aby udowodnić, że podany adres Helium jest w twoim posiadaniu</translation>
+        <source>Sign the message to prove you own this 401KCoin address</source>
+        <translation>Zatwierdź wiadomość, aby udowodnić, że podany adres 401KCoin jest w twoim posiadaniu</translation>
     </message>
     <message>
         <source>Encrypt &amp;Key</source>
@@ -518,16 +518,16 @@
         <translation>&amp;Pomoc</translation>
     </message>
     <message>
-        <source>Helium Core</source>
-        <translation>&amp;Rdzeń Helium</translation>
+        <source>401KCoin Core</source>
+        <translation>&amp;Rdzeń 401KCoin</translation>
     </message>
     <message>
-        <source>Send coins to a Helium address</source>
-        <translation>Wyślij monety do adresu Helium</translation>
+        <source>Send coins to a 401KCoin address</source>
+        <translation>Wyślij monety do adresu 401KCoin</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and helium: URIs)</source>
-        <translation>Zarządaj płatności (generuje kod QR i helium:URI)</translation>
+        <source>Request payments (generates QR codes and 401kcoin: URIs)</source>
+        <translation>Zarządaj płatności (generuje kod QR i 401kcoin:URI)</translation>
     </message>
     <message>
         <source>&amp;Masternodes</source>
@@ -538,24 +538,24 @@
         <translation>Przeglądaj masternodes</translation>
     </message>
     <message>
-        <source>&amp;About Helium Core</source>
+        <source>&amp;About 401KCoin Core</source>
         <translation>&amp;O rdzeniu bitcoina</translation>
     </message>
     <message>
-        <source>Show information about Helium Core</source>
+        <source>Show information about 401KCoin Core</source>
         <translation>Pokaż informacje o rdzeniu bitcoina</translation>
     </message>
     <message>
-        <source>Modify configuration options for Helium</source>
-        <translation>Modyfikuj opcje konfiguracji Helium</translation>
+        <source>Modify configuration options for 401KCoin</source>
+        <translation>Modyfikuj opcje konfiguracji 401KCoin</translation>
     </message>
     <message>
-        <source>Sign messages with your Helium addresses to prove you own them</source>
-        <translation>Zatwierdź wiadomość z twoimi adresami Helium, by udowodnić, że jesteś w ich posiadaniu</translation>
+        <source>Sign messages with your 401KCoin addresses to prove you own them</source>
+        <translation>Zatwierdź wiadomość z twoimi adresami 401KCoin, by udowodnić, że jesteś w ich posiadaniu</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Helium addresses</source>
-        <translation>Zweryfikuj wiadomości by upewnić się, że zostały zatwierdzone z podanego adresu Helium</translation>
+        <source>Verify messages to ensure they were signed with specified 401KCoin addresses</source>
+        <translation>Zweryfikuj wiadomości by upewnić się, że zostały zatwierdzone z podanego adresu 401KCoin</translation>
     </message>
     <message>
         <source>&amp;BIP38 tool</source>
@@ -582,8 +582,8 @@
         <translation>Otwórz &amp;Plik konfiguracji Masternode</translation>
     </message>
     <message>
-        <source>Open a Helium: URI or payment request</source>
-        <translation>Otwórz Helium: URI i żądanie zapłaty</translation>
+        <source>Open a 401KCoin: URI or payment request</source>
+        <translation>Otwórz 401KCoin: URI i żądanie zapłaty</translation>
     </message>
     <message>
         <source>&amp;Blockchain explorer</source>
@@ -594,12 +594,12 @@
         <translation>Okno eksplorera bloków</translation>
     </message>
     <message>
-        <source>Show the Helium Core help message to get a list with possible Helium command-line options</source>
-        <translation>Pokaż wiadomość pomocy rdzenia Helium, aby dostać listę możliwych opcji Helium command-line</translation>
+        <source>Show the 401KCoin Core help message to get a list with possible 401KCoin command-line options</source>
+        <translation>Pokaż wiadomość pomocy rdzenia 401KCoin, aby dostać listę możliwych opcji 401KCoin command-line</translation>
     </message>
     <message>
-        <source>Helium Core client</source>
-        <translation>Rdzeń Helium klient</translation>
+        <source>401KCoin Core client</source>
+        <translation>Rdzeń 401KCoin klient</translation>
     </message>
     <message>
         <source>Synchronizing with network...</source>
@@ -912,8 +912,8 @@ MultiWysyłlka: %1</translation>
 <context>
     <name>HelpMessageDialog</name>
     <message>
-        <source>Helium Core</source>
-        <translation>&amp;Rdzeń Helium</translation>
+        <source>401KCoin Core</source>
+        <translation>&amp;Rdzeń 401KCoin</translation>
     </message>
     </context>
 <context>
@@ -927,8 +927,8 @@ MultiWysyłlka: %1</translation>
         <translation>Użyj niestandardowej ścieżki danych</translation>
     </message>
     <message>
-        <source>Helium Core</source>
-        <translation>&amp;Rdzeń Helium</translation>
+        <source>401KCoin Core</source>
+        <translation>&amp;Rdzeń 401KCoin</translation>
     </message>
     <message>
         <source>Error</source>
@@ -1188,12 +1188,12 @@ Proszę sprawdzić adres i spróbować ponownie</translation>
         <translation>Zezwól na przychodzące połączenia</translation>
     </message>
     <message>
-        <source>Automatically start Helium after logging in to the system.</source>
-        <translation>Automatycznie uruchom Helium po zalogowaniu do systemu</translation>
+        <source>Automatically start 401KCoin after logging in to the system.</source>
+        <translation>Automatycznie uruchom 401KCoin po zalogowaniu do systemu</translation>
     </message>
     <message>
-        <source>&amp;Start Helium on system login</source>
-        <translation>&amp;Uruchom Helium podczas logowania do systemu</translation>
+        <source>&amp;Start 401KCoin on system login</source>
+        <translation>&amp;Uruchom 401KCoin podczas logowania do systemu</translation>
     </message>
     <message>
         <source>Whether to show coin control features or not.</source>
@@ -1212,18 +1212,18 @@ Proszę sprawdzić adres i spróbować ponownie</translation>
         <translation>&amp;Sieć</translation>
     </message>
     <message>
-        <source>The user interface language can be set here. This setting will take effect after restarting Helium.</source>
-        <translation>Język interfejsu użytkownika może być wybrany tutaj. Ustawienia ulegną zmianie po restarcie Helium</translation>
+        <source>The user interface language can be set here. This setting will take effect after restarting 401KCoin.</source>
+        <translation>Język interfejsu użytkownika może być wybrany tutaj. Ustawienia ulegną zmianie po restarcie 401KCoin</translation>
     </message>
     <message>
         <source>Language missing or translation incomplete? Help contributing translations here:
-https://www.transifex.com/helium-project/helium-project-translations</source>
+https://www.transifex.com/401kcoin-project/401kcoin-project-translations</source>
         <translation>Brakuje języka bądź nieukończona pełnego tłumaczenia? Pomóż w tłumaczeniu tutaj:
-https://www.transifex.com/helium-project/helium-project-translations </translation>
+https://www.transifex.com/401kcoin-project/401kcoin-project-translations </translation>
     </message>
     <message>
-        <source>Connect to the Helium network through a SOCKS5 proxy.</source>
-        <translation>Połącz z siecią Helium poprzez SOCKS5 proxy.</translation>
+        <source>Connect to the 401KCoin network through a SOCKS5 proxy.</source>
+        <translation>Połącz z siecią 401KCoin poprzez SOCKS5 proxy.</translation>
     </message>
     <message>
         <source>Proxy &amp;IP:</source>
@@ -1461,8 +1461,8 @@ https://www.transifex.com/helium-project/helium-project-translations </translati
         <translation>Liczba</translation>
     </message>
     <message>
-        <source>Enter a Helium address (e.g. %1)</source>
-        <translation>Wprowadź adres Helium (np. %1)</translation>
+        <source>Enter a 401KCoin address (e.g. %1)</source>
+        <translation>Wprowadź adres 401KCoin (np. %1)</translation>
     </message>
     <message>
         <source>%1 d</source>
@@ -1900,8 +1900,8 @@ https://www.transifex.com/helium-project/helium-project-translations </translati
         <translation>Alt+P</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Helium address</source>
-        <translation>Zatwierdź wiadomość, aby udowodnić, że podany adres Helium jest w twoim posiadaniu</translation>
+        <source>Sign the message to prove you own this 401KCoin address</source>
+        <translation>Zatwierdź wiadomość, aby udowodnić, że podany adres 401KCoin jest w twoim posiadaniu</translation>
     </message>
     <message>
         <source>Clear &amp;All</source>
@@ -1935,8 +1935,8 @@ https://www.transifex.com/helium-project/helium-project-translations </translati
 <context>
     <name>SplashScreen</name>
     <message>
-        <source>Helium Core</source>
-        <translation>&amp;Rdzeń Helium</translation>
+        <source>401KCoin Core</source>
+        <translation>&amp;Rdzeń 401KCoin</translation>
     </message>
     </context>
 <context>
@@ -2027,14 +2027,14 @@ https://www.transifex.com/helium-project/helium-project-translations </translati
     </message>
     </context>
 <context>
-    <name>ZHeliumControlDialog</name>
+    <name>Z401KCoinControlDialog</name>
     <message>
         <source>0</source>
         <translation>0</translation>
     </message>
     </context>
 <context>
-    <name>helium-core</name>
+    <name>401kcoin-core</name>
     <message>
         <source>Error</source>
         <translation>Błąd</translation>

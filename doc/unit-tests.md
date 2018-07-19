@@ -6,13 +6,13 @@ and tests weren't explicitly disabled.
 
 After configuring, they can be run with 'make check'.
 
-To run the heliumd tests manually, launch src/test/test_helium .
+To run the 401kcoind tests manually, launch src/test/test_401kcoin .
 
-To add more heliumd tests, add `BOOST_AUTO_TEST_CASE` functions to the existing
+To add more 401kcoind tests, add `BOOST_AUTO_TEST_CASE` functions to the existing
 .cpp files in the test/ directory or add new .cpp files that
 implement new BOOST_AUTO_TEST_SUITE sections.
 
-To run the helium-qt tests manually, launch src/qt/test/helium-qt_test
+To run the 401kcoin-qt tests manually, launch src/qt/test/401kcoin-qt_test
 
-To add more helium-qt tests, add them to the `src/qt/test/` directory and
+To add more 401kcoin-qt tests, add them to the `src/qt/test/` directory and
 the `src/qt/test/test_main.cpp` file.

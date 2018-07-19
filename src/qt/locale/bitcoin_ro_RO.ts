@@ -189,9 +189,9 @@
     </message>
     </context>
 <context>
-    <name>ZHeliumControlDialog</name>
+    <name>Z401KCoinControlDialog</name>
     </context>
 <context>
-    <name>helium-core</name>
+    <name>401kcoin-core</name>
     </context>
 </TS>

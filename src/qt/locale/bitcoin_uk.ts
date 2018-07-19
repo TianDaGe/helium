@@ -62,12 +62,12 @@
         <translation>Адреса отримання</translation>
     </message>
     <message>
-        <source>These are your Helium addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Це ваші Helium-адреси для надсилання платежів. Завжди перевіряйте суму та адресу одержувача перед відправленням монет.</translation>
+        <source>These are your 401KCoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Це ваші 401KCoin-адреси для надсилання платежів. Завжди перевіряйте суму та адресу одержувача перед відправленням монет.</translation>
     </message>
     <message>
-        <source>These are your Helium addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Це ваші Helium адреси для отримання платежів. Для кожної транзакції рекомендується використовувати нову адресу одержувача.</translation>
+        <source>These are your 401KCoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Це ваші 401KCoin адреси для отримання платежів. Для кожної транзакції рекомендується використовувати нову адресу одержувача.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -172,16 +172,16 @@
         <translation>Підтвердження шифрування гаманця</translation>
     </message>
     <message>
-        <source>Helium will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your HLMs from being stolen by malware infecting your computer.</source>
-        <translation>Helium зараз закриється, щоб завершити процес шифрування. Пам'ятайте, що шифрування гаманця не може повністю захистити ваші HLM'и від крадіжки зловмисним програмним забезпеченням, що заражає ваш комп'ютер.</translation>
+        <source>401KCoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your 401Ks from being stolen by malware infecting your computer.</source>
+        <translation>401KCoin зараз закриється, щоб завершити процес шифрування. Пам'ятайте, що шифрування гаманця не може повністю захистити ваші 401K'и від крадіжки зловмисним програмним забезпеченням, що заражає ваш комп'ютер.</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
         <translation>Ви впевнені, що хочете зашифрувати Ваш гаманець?</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR HLM&lt;/b&gt;!</source>
-        <translation>Попередження: Якщо після шифрування гаманця Ви &lt;b&gt;загубите кодове слово, то ви втратите всі Ваші HLM'и&lt;/b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR 401K&lt;/b&gt;!</source>
+        <translation>Попередження: Якщо після шифрування гаманця Ви &lt;b&gt;загубите кодове слово, то ви втратите всі Ваші 401K'и&lt;/b&gt;!</translation>
     </message>
     <message>
         <source>Wallet encrypted</source>
@@ -373,9 +373,9 @@
     </message>
     </context>
 <context>
-    <name>ZHeliumControlDialog</name>
+    <name>Z401KCoinControlDialog</name>
     </context>
 <context>
-    <name>helium-core</name>
+    <name>401kcoin-core</name>
     </context>
 </TS>

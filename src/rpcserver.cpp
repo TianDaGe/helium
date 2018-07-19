@@ -2,7 +2,7 @@
 // Copyright (c) 2009-2014 The Bitcoin developers
 // Copyright (c) 2014-2015 The Dash developers
 // Copyright (c) 2015-2018 The PIVX developers
-// Copyright (c) 2018 The Helium developers
+// Copyright (c) 2018 The 401KCoin developers
 
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
@@ -265,11 +265,11 @@ UniValue stop(const UniValue& params, bool fHelp)
     if (fHelp || params.size() > 1)
         throw runtime_error(
             "stop\n"
-            "\nStop Helium server.");
+            "\nStop 401KCoin server.");
     // Event loop will exit after current HTTP requests have been handled, so
     // this reply will get back to the client.
     StartShutdown();
-    return "Helium server stopping";
+    return "401KCoin server stopping";
 }
 
 
@@ -354,36 +354,36 @@ static const CRPCCommand vRPCCommands[] =
         {"hidden", "setmocktime", &setmocktime, true, false, false},
 
         /* PIVX features */
-        {"helium", "masternode", &masternode, true, true, false},
-        {"helium", "listmasternodes", &listmasternodes, true, true, false},
-        {"helium", "getmasternodecount", &getmasternodecount, true, true, false},
-        {"helium", "masternodeconnect", &masternodeconnect, true, true, false},
-        {"helium", "createmasternodebroadcast", &createmasternodebroadcast, true, true, false},
-        {"helium", "decodemasternodebroadcast", &decodemasternodebroadcast, true, true, false},
-        {"helium", "relaymasternodebroadcast", &relaymasternodebroadcast, true, true, false},
-        {"helium", "masternodecurrent", &masternodecurrent, true, true, false},
-        {"helium", "masternodedebug", &masternodedebug, true, true, false},
-        {"helium", "startmasternode", &startmasternode, true, true, false},
-        {"helium", "createmasternodekey", &createmasternodekey, true, true, false},
-        {"helium", "getmasternodeoutputs", &getmasternodeoutputs, true, true, false},
-        {"helium", "listmasternodeconf", &listmasternodeconf, true, true, false},
-        {"helium", "getmasternodestatus", &getmasternodestatus, true, true, false},
-        {"helium", "getmasternodewinners", &getmasternodewinners, true, true, false},
-        {"helium", "getmasternodescores", &getmasternodescores, true, true, false},
-        {"helium", "mnbudget", &mnbudget, true, true, false},
-        {"helium", "preparebudget", &preparebudget, true, true, false},
-        {"helium", "submitbudget", &submitbudget, true, true, false},
-        {"helium", "mnbudgetvote", &mnbudgetvote, true, true, false},
-        {"helium", "getbudgetvotes", &getbudgetvotes, true, true, false},
-        {"helium", "getnextsuperblock", &getnextsuperblock, true, true, false},
-        {"helium", "getbudgetprojection", &getbudgetprojection, true, true, false},
-        {"helium", "getbudgetinfo", &getbudgetinfo, true, true, false},
-        {"helium", "mnbudgetrawvote", &mnbudgetrawvote, true, true, false},
-        {"helium", "mnfinalbudget", &mnfinalbudget, true, true, false},
-        {"helium", "checkbudgets", &checkbudgets, true, true, false},
-        {"helium", "mnsync", &mnsync, true, true, false},
-        {"helium", "spork", &spork, true, true, false},
-        {"helium", "getpoolinfo", &getpoolinfo, true, true, false},
+        {"401kcoin", "masternode", &masternode, true, true, false},
+        {"401kcoin", "listmasternodes", &listmasternodes, true, true, false},
+        {"401kcoin", "getmasternodecount", &getmasternodecount, true, true, false},
+        {"401kcoin", "masternodeconnect", &masternodeconnect, true, true, false},
+        {"401kcoin", "createmasternodebroadcast", &createmasternodebroadcast, true, true, false},
+        {"401kcoin", "decodemasternodebroadcast", &decodemasternodebroadcast, true, true, false},
+        {"401kcoin", "relaymasternodebroadcast", &relaymasternodebroadcast, true, true, false},
+        {"401kcoin", "masternodecurrent", &masternodecurrent, true, true, false},
+        {"401kcoin", "masternodedebug", &masternodedebug, true, true, false},
+        {"401kcoin", "startmasternode", &startmasternode, true, true, false},
+        {"401kcoin", "createmasternodekey", &createmasternodekey, true, true, false},
+        {"401kcoin", "getmasternodeoutputs", &getmasternodeoutputs, true, true, false},
+        {"401kcoin", "listmasternodeconf", &listmasternodeconf, true, true, false},
+        {"401kcoin", "getmasternodestatus", &getmasternodestatus, true, true, false},
+        {"401kcoin", "getmasternodewinners", &getmasternodewinners, true, true, false},
+        {"401kcoin", "getmasternodescores", &getmasternodescores, true, true, false},
+        {"401kcoin", "mnbudget", &mnbudget, true, true, false},
+        {"401kcoin", "preparebudget", &preparebudget, true, true, false},
+        {"401kcoin", "submitbudget", &submitbudget, true, true, false},
+        {"401kcoin", "mnbudgetvote", &mnbudgetvote, true, true, false},
+        {"401kcoin", "getbudgetvotes", &getbudgetvotes, true, true, false},
+        {"401kcoin", "getnextsuperblock", &getnextsuperblock, true, true, false},
+        {"401kcoin", "getbudgetprojection", &getbudgetprojection, true, true, false},
+        {"401kcoin", "getbudgetinfo", &getbudgetinfo, true, true, false},
+        {"401kcoin", "mnbudgetrawvote", &mnbudgetrawvote, true, true, false},
+        {"401kcoin", "mnfinalbudget", &mnfinalbudget, true, true, false},
+        {"401kcoin", "checkbudgets", &checkbudgets, true, true, false},
+        {"401kcoin", "mnsync", &mnsync, true, true, false},
+        {"401kcoin", "spork", &spork, true, true, false},
+        {"401kcoin", "getpoolinfo", &getpoolinfo, true, true, false},
 
 #ifdef ENABLE_WALLET
         /* Wallet */
@@ -450,11 +450,11 @@ static const CRPCCommand vRPCCommands[] =
         {"zerocoin", "exportzerocoins", &exportzerocoins, false, false, true},
         {"zerocoin", "reconsiderzerocoins", &reconsiderzerocoins, false, false, true},
         {"zerocoin", "getspentzerocoinamount", &getspentzerocoinamount, false, false, false},
-        {"zerocoin", "getzhlmseed", &getzhlmseed, false, false, true},
-        {"zerocoin", "setzhlmseed", &setzhlmseed, false, false, true},
+        {"zerocoin", "getz401kseed", &getz401kseed, false, false, true},
+        {"zerocoin", "setz401kseed", &setz401kseed, false, false, true},
         {"zerocoin", "generatemintlist", &generatemintlist, false, false, true},
-        {"zerocoin", "searchdzhlm", &searchdzhlm, false, false, true},
-        {"zerocoin", "dzhlmstate", &dzhlmstate, false, false, true}
+        {"zerocoin", "searchdz401k", &searchdz401k, false, false, true},
+        {"zerocoin", "dz401kstate", &dz401kstate, false, false, true}
 
 #endif // ENABLE_WALLET
 };
@@ -618,7 +618,7 @@ std::vector<std::string> CRPCTable::listCommands() const
 
 std::string HelpExampleCli(string methodname, string args)
 {
-    return "> helium-cli " + methodname + " " + args + "\n";
+    return "> 401kcoin-cli " + methodname + " " + args + "\n";
 }
 
 std::string HelpExampleRpc(string methodname, string args)

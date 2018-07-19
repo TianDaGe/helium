@@ -18,7 +18,7 @@ osx=true
 SIGNER=faetos
 VERSION=0.14.5
 commit=false
-url=https://github.com/heliumchain/helium
+url=https://github.com/401kcoinchain/401kcoin
 proc=2
 mem=2000
 lxc=true
@@ -249,8 +249,8 @@ echo ${COMMIT}
 if [[ $setup = true ]]
 then
     sudo apt-get install ruby apache2 git apt-cacher-ng python-vm-builder qemu-kvm qemu-utils
-    git clone https://github.com/heliumchain/gitian.sigs.git
-    git clone https://github.com/heliumchain/helium-detached-sigs.git
+    git clone https://github.com/401kcoinchain/gitian.sigs.git
+    git clone https://github.com/401kcoinchain/401kcoin-detached-sigs.git
     git clone https://github.com/devrandom/gitian-builder.git
     pushd ./gitian-builder
     if [[ -n "$USE_LXC" ]]
@@ -268,7 +268,7 @@ then
 fi
 
 # Set up build
-pushd ./helium
+pushd ./401kcoin
 git fetch
 git checkout ${COMMIT}
 popd
@@ -277,7 +277,7 @@ popd
 if [[ $build = true ]]
 then
 	# Make output folder
-	mkdir -p ./helium-binaries/${VERSION}
+	mkdir -p ./401kcoin-binaries/${VERSION}
 	
 	# Build Dependencies
 	echo ""
@@ -287,7 +287,7 @@ then
 	mkdir -p inputs
 	wget -N -P inputs $osslPatchUrl
 	wget -N -P inputs $osslTarUrl
-	make -C ../helium/depends download SOURCES_PATH=`pwd`/cache/common
+	make -C ../401kcoin/depends download SOURCES_PATH=`pwd`/cache/common
 
 	# Linux
 	if [[ $linux = true ]]
@@ -295,9 +295,9 @@ then
             echo ""
 	    echo "Compiling ${VERSION} Linux"
 	    echo ""
-	    ./bin/gbuild -j ${proc} -m ${mem} --commit helium=${COMMIT} --url helium=${url} ../helium/contrib/gitian-descriptors/gitian-linux.yml
-	    ./bin/gsign -p "$signProg" --signer "$SIGNER" --release ${VERSION}-linux --destination ../gitian.sigs/ ../helium/contrib/gitian-descriptors/gitian-linux.yml
-	    mv build/out/helium-*.tar.gz build/out/src/helium-*.tar.gz ../helium-binaries/${VERSION}
+	    ./bin/gbuild -j ${proc} -m ${mem} --commit 401kcoin=${COMMIT} --url 401kcoin=${url} ../401kcoin/contrib/gitian-descriptors/gitian-linux.yml
+	    ./bin/gsign -p "$signProg" --signer "$SIGNER" --release ${VERSION}-linux --destination ../gitian.sigs/ ../401kcoin/contrib/gitian-descriptors/gitian-linux.yml
+	    mv build/out/401kcoin-*.tar.gz build/out/src/401kcoin-*.tar.gz ../401kcoin-binaries/${VERSION}
 	fi
 	# Windows
 	if [[ $windows = true ]]
@@ -305,10 +305,10 @@ then
 	    echo ""
 	    echo "Compiling ${VERSION} Windows"
 	    echo ""
-	    ./bin/gbuild -j ${proc} -m ${mem} --commit helium=${COMMIT} --url helium=${url} ../helium/contrib/gitian-descriptors/gitian-win.yml
-	    ./bin/gsign -p "$signProg" --signer "$SIGNER" --release ${VERSION}-win-unsigned --destination ../gitian.sigs/ ../helium/contrib/gitian-descriptors/gitian-win.yml
-	    mv build/out/helium-*-win-unsigned.tar.gz inputs/helium-win-unsigned.tar.gz
-	    mv build/out/helium-*.zip build/out/helium-*.exe ../helium-binaries/${VERSION}
+	    ./bin/gbuild -j ${proc} -m ${mem} --commit 401kcoin=${COMMIT} --url 401kcoin=${url} ../401kcoin/contrib/gitian-descriptors/gitian-win.yml
+	    ./bin/gsign -p "$signProg" --signer "$SIGNER" --release ${VERSION}-win-unsigned --destination ../gitian.sigs/ ../401kcoin/contrib/gitian-descriptors/gitian-win.yml
+	    mv build/out/401kcoin-*-win-unsigned.tar.gz inputs/401kcoin-win-unsigned.tar.gz
+	    mv build/out/401kcoin-*.zip build/out/401kcoin-*.exe ../401kcoin-binaries/${VERSION}
 	fi
 	# Mac OSX
 	if [[ $osx = true ]]
@@ -316,10 +316,10 @@ then
 	    echo ""
 	    echo "Compiling ${VERSION} Mac OSX"
 	    echo ""
-	    ./bin/gbuild -j ${proc} -m ${mem} --commit helium=${COMMIT} --url helium=${url} ../helium/contrib/gitian-descriptors/gitian-osx.yml
-	    ./bin/gsign -p "$signProg" --signer "$SIGNER" --release ${VERSION}-osx-unsigned --destination ../gitian.sigs/ ../helium/contrib/gitian-descriptors/gitian-osx.yml
-	    mv build/out/helium-*-osx-unsigned.tar.gz inputs/helium-osx-unsigned.tar.gz
-	    mv build/out/helium-*.tar.gz build/out/helium-*.dmg ../helium-binaries/${VERSION}
+	    ./bin/gbuild -j ${proc} -m ${mem} --commit 401kcoin=${COMMIT} --url 401kcoin=${url} ../401kcoin/contrib/gitian-descriptors/gitian-osx.yml
+	    ./bin/gsign -p "$signProg" --signer "$SIGNER" --release ${VERSION}-osx-unsigned --destination ../gitian.sigs/ ../401kcoin/contrib/gitian-descriptors/gitian-osx.yml
+	    mv build/out/401kcoin-*-osx-unsigned.tar.gz inputs/401kcoin-osx-unsigned.tar.gz
+	    mv build/out/401kcoin-*.tar.gz build/out/401kcoin-*.dmg ../401kcoin-binaries/${VERSION}
 	fi
 	popd
 
@@ -346,27 +346,27 @@ then
 	echo ""
 	echo "Verifying v${VERSION} Linux"
 	echo ""
-	./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-linux ../helium/contrib/gitian-descriptors/gitian-linux.yml
+	./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-linux ../401kcoin/contrib/gitian-descriptors/gitian-linux.yml
 	# Windows
 	echo ""
 	echo "Verifying v${VERSION} Windows"
 	echo ""
-	./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-win-unsigned ../helium/contrib/gitian-descriptors/gitian-win.yml
+	./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-win-unsigned ../401kcoin/contrib/gitian-descriptors/gitian-win.yml
 	# Mac OSX	
 	echo ""
 	echo "Verifying v${VERSION} Mac OSX"
 	echo ""	
-	./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-osx-unsigned ../helium/contrib/gitian-descriptors/gitian-osx.yml
+	./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-osx-unsigned ../401kcoin/contrib/gitian-descriptors/gitian-osx.yml
 	# Signed Windows
 	echo ""
 	echo "Verifying v${VERSION} Signed Windows"
 	echo ""
-	./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-osx-signed ../helium/contrib/gitian-descriptors/gitian-osx-signer.yml
+	./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-osx-signed ../401kcoin/contrib/gitian-descriptors/gitian-osx-signer.yml
 	# Signed Mac OSX
 	echo ""
 	echo "Verifying v${VERSION} Signed Mac OSX"
 	echo ""
-	./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-osx-signed ../helium/contrib/gitian-descriptors/gitian-osx-signer.yml	
+	./bin/gverify -v -d ../gitian.sigs/ -r ${VERSION}-osx-signed ../401kcoin/contrib/gitian-descriptors/gitian-osx-signer.yml	
 	popd
 fi
 
@@ -381,10 +381,10 @@ then
 	    echo ""
 	    echo "Signing ${VERSION} Windows"
 	    echo ""
-	    ./bin/gbuild -i --commit signature=${COMMIT} ../helium/contrib/gitian-descriptors/gitian-win-signer.yml
-	    ./bin/gsign -p "$signProg" --signer "$SIGNER" --release ${VERSION}-win-signed --destination ../gitian.sigs/ ../helium/contrib/gitian-descriptors/gitian-win-signer.yml
-	    mv build/out/helium-*win64-setup.exe ../helium-binaries/${VERSION}
-	    mv build/out/helium-*win32-setup.exe ../helium-binaries/${VERSION}
+	    ./bin/gbuild -i --commit signature=${COMMIT} ../401kcoin/contrib/gitian-descriptors/gitian-win-signer.yml
+	    ./bin/gsign -p "$signProg" --signer "$SIGNER" --release ${VERSION}-win-signed --destination ../gitian.sigs/ ../401kcoin/contrib/gitian-descriptors/gitian-win-signer.yml
+	    mv build/out/401kcoin-*win64-setup.exe ../401kcoin-binaries/${VERSION}
+	    mv build/out/401kcoin-*win32-setup.exe ../401kcoin-binaries/${VERSION}
 	fi
 	# Sign Mac OSX
 	if [[ $osx = true ]]
@@ -392,9 +392,9 @@ then
 	    echo ""
 	    echo "Signing ${VERSION} Mac OSX"
 	    echo ""
-	    ./bin/gbuild -i --commit signature=${COMMIT} ../helium/contrib/gitian-descriptors/gitian-osx-signer.yml
-	    ./bin/gsign -p "$signProg" --signer "$SIGNER" --release ${VERSION}-osx-signed --destination ../gitian.sigs/ ../helium/contrib/gitian-descriptors/gitian-osx-signer.yml
-	    mv build/out/helium-osx-signed.dmg ../helium-binaries/${VERSION}/helium-${VERSION}-osx.dmg
+	    ./bin/gbuild -i --commit signature=${COMMIT} ../401kcoin/contrib/gitian-descriptors/gitian-osx-signer.yml
+	    ./bin/gsign -p "$signProg" --signer "$SIGNER" --release ${VERSION}-osx-signed --destination ../gitian.sigs/ ../401kcoin/contrib/gitian-descriptors/gitian-osx-signer.yml
+	    mv build/out/401kcoin-osx-signed.dmg ../401kcoin-binaries/${VERSION}/401kcoin-${VERSION}-osx.dmg
 	fi
 	popd
 

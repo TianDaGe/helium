@@ -1,7 +1,7 @@
 // Copyright (c) 2011-2014 The Bitcoin developers
 // Copyright (c) 2014-2015 The Dash developers
 // Copyright (c) 2015-2017 The XBTC developers
-// Copyright (c) 2018 The Helium developers
+// Copyright (c) 2018 The 401KCoin developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -42,11 +42,11 @@ QString BitcoinUnits::id(int unit)
 {
     switch (unit) {
     case BTC:
-        return QString("hlm");
+        return QString("401k");
     case mBTC:
-        return QString("mhlm");
+        return QString("m401k");
     case uBTC:
-        return QString::fromUtf8("uhlm");
+        return QString::fromUtf8("u401k");
     default:
         return QString("???");
     }
@@ -57,22 +57,22 @@ QString BitcoinUnits::name(int unit)
     if (Params().NetworkID() == CBaseChainParams::MAIN) {
         switch (unit) {
         case BTC:
-            return QString("HLM");
+            return QString("401K");
         case mBTC:
-            return QString("mHLM");
+            return QString("m401K");
         case uBTC:
-            return QString::fromUtf8("μHLM");
+            return QString::fromUtf8("μ401K");
         default:
             return QString("???");
         }
     } else {
         switch (unit) {
         case BTC:
-            return QString("tHLM");
+            return QString("t401K");
         case mBTC:
-            return QString("mtHLM");
+            return QString("mt401K");
         case uBTC:
-            return QString::fromUtf8("μtHLM");
+            return QString::fromUtf8("μt401K");
         default:
             return QString("???");
         }
@@ -84,22 +84,22 @@ QString BitcoinUnits::description(int unit)
     if (Params().NetworkID() == CBaseChainParams::MAIN) {
         switch (unit) {
         case BTC:
-            return QString("HLM");
+            return QString("401K");
         case mBTC:
-            return QString("Milli-HLM (1 / 1" THIN_SP_UTF8 "000)");
+            return QString("Milli-401K (1 / 1" THIN_SP_UTF8 "000)");
         case uBTC:
-            return QString("Micro-HLM (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
+            return QString("Micro-401K (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
         default:
             return QString("???");
         }
     } else {
         switch (unit) {
         case BTC:
-            return QString("TestHLMs");
+            return QString("Test401Ks");
         case mBTC:
-            return QString("Milli-TestHLM (1 / 1" THIN_SP_UTF8 "000)");
+            return QString("Milli-Test401K (1 / 1" THIN_SP_UTF8 "000)");
         case uBTC:
-            return QString("Micro-TestHLM (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
+            return QString("Micro-Test401K (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
         default:
             return QString("???");
         }

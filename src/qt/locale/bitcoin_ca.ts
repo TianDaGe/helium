@@ -164,8 +164,8 @@
         <translation>Estàs segur que vols encriptar el moneder?</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR HLM&lt;/b&gt;!</source>
-        <translation>Avís: Si encripteu el vostre moneder i perdeu la contrasenya, &lt;b&gt;PERDREU TOTS ELS VOSTRES HLMS&lt;/b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR 401K&lt;/b&gt;!</source>
+        <translation>Avís: Si encripteu el vostre moneder i perdeu la contrasenya, &lt;b&gt;PERDREU TOTS ELS VOSTRES 401KS&lt;/b&gt;!</translation>
     </message>
     <message>
         <source>Wallet encrypted</source>
@@ -354,12 +354,12 @@
         <translation>A&amp;juda</translation>
     </message>
     <message>
-        <source>Helium Core</source>
-        <translation>Helium Core</translation>
+        <source>401KCoin Core</source>
+        <translation>401KCoin Core</translation>
     </message>
     <message>
-        <source>&amp;About Helium Core</source>
-        <translation>&amp;Sobre Helium Core</translation>
+        <source>&amp;About 401KCoin Core</source>
+        <translation>&amp;Sobre 401KCoin Core</translation>
     </message>
     <message>
         <source>&amp;BIP38 tool</source>
@@ -552,12 +552,12 @@
         <translation>versió</translation>
     </message>
     <message>
-        <source>Helium Core</source>
-        <translation>Helium Core</translation>
+        <source>401KCoin Core</source>
+        <translation>401KCoin Core</translation>
     </message>
     <message>
-        <source>About Helium Core</source>
-        <translation>Sobre Helium Core</translation>
+        <source>About 401KCoin Core</source>
+        <translation>Sobre 401KCoin Core</translation>
     </message>
     <message>
         <source>Usage:</source>
@@ -575,12 +575,12 @@
         <translation>Benvingut</translation>
     </message>
     <message>
-        <source>Welcome to Helium Core.</source>
-        <translation>Benvingut a Helium Core.</translation>
+        <source>Welcome to 401KCoin Core.</source>
+        <translation>Benvingut a 401KCoin Core.</translation>
     </message>
     <message>
-        <source>Helium Core</source>
-        <translation>Helium Core</translation>
+        <source>401KCoin Core</source>
+        <translation>401KCoin Core</translation>
     </message>
     <message>
         <source>Error</source>
@@ -1147,8 +1147,8 @@
 <context>
     <name>SplashScreen</name>
     <message>
-        <source>Helium Core</source>
-        <translation>Helium Core</translation>
+        <source>401KCoin Core</source>
+        <translation>401KCoin Core</translation>
     </message>
     <message>
         <source>Version %1</source>
@@ -1307,10 +1307,10 @@
     </message>
     </context>
 <context>
-    <name>ZHeliumControlDialog</name>
+    <name>Z401KCoinControlDialog</name>
     </context>
 <context>
-    <name>helium-core</name>
+    <name>401kcoin-core</name>
     <message>
         <source>Error</source>
         <translation>Error</translation>

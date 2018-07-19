@@ -80,11 +80,11 @@ noinst_PROGRAMS =
 TESTS =
 
 if BUILD_BITCOIND
-  bin_PROGRAMS += heliumd
+  bin_PROGRAMS += 401kcoind
 endif
 
 if BUILD_BITCOIN_UTILS
-  bin_PROGRAMS += helium-cli helium-tx
+  bin_PROGRAMS += 401kcoin-cli 401kcoin-tx
 endif
 
 .PHONY: FORCE
@@ -208,7 +208,7 @@ obj/build.h: FORCE
 	  "$(abs_top_srcdir)"
 libbitcoin_util_a-clientversion.$(OBJEXT): obj/build.h
 
-# server: shared between heliumd and helium-qt
+# server: shared between 401kcoind and 401kcoin-qt
 libbitcoin_server_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(MINIUPNPC_CPPFLAGS) $(EVENT_CFLAGS) $(EVENT_PTHREADS_CFLAGS)
 libbitcoin_server_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
 libbitcoin_server_a_SOURCES = \
@@ -256,7 +256,7 @@ libbitcoin_zmq_a_SOURCES = \
   zmq/zmqpublishnotifier.cpp
 endif
 
-# wallet: shared between heliumd and helium-qt, but only linked
+# wallet: shared between 401kcoind and 401kcoin-qt, but only linked
 # when wallet enabled
 libbitcoin_wallet_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
 libbitcoin_wallet_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
@@ -351,7 +351,7 @@ libzerocoin_libbitcoin_zerocoin_a_SOURCES = \
   libzerocoin/Params.cpp \
   libzerocoin/SerialNumberSignatureOfKnowledge.cpp
 
-# common: shared between heliumd, and helium-qt and non-server tools
+# common: shared between 401kcoind, and 401kcoin-qt and non-server tools
 libbitcoin_common_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
 libbitcoin_common_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
 libbitcoin_common_a_SOURCES = \
@@ -416,7 +416,7 @@ if GLIBC_BACK_COMPAT
 libbitcoin_util_a_SOURCES += compat/glibc_compat.cpp
 endif
 
-# cli: shared between helium-cli and helium-qt
+# cli: shared between 401kcoin-cli and 401kcoin-qt
 libbitcoin_cli_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
 libbitcoin_cli_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
 libbitcoin_cli_a_SOURCES = \
@@ -426,16 +426,16 @@ libbitcoin_cli_a_SOURCES = \
 nodist_libbitcoin_util_a_SOURCES = $(srcdir)/obj/build.h
 #
 
-# heliumd binary #
-heliumd_SOURCES = bitcoind.cpp
-heliumd_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
-heliumd_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-heliumd_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+# 401kcoind binary #
+401kcoind_SOURCES = bitcoind.cpp
+401kcoind_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
+401kcoind_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+401kcoind_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
 
 if TARGET_WINDOWS
-heliumd_SOURCES += bitcoind-res.rc
+401kcoind_SOURCES += bitcoind-res.rc
 endif
-heliumd_LDADD = \
+401kcoind_LDADD = \
   $(LIBBITCOIN_SERVER) \
   $(LIBBITCOIN_COMMON) \
   $(LIBUNIVALUE) \
@@ -448,38 +448,38 @@ heliumd_LDADD = \
   $(LIBMEMENV) \
   $(LIBSECP256K1)
 
-heliumd_LDADD += $(BOOST_LIBS) $(BDB_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(MINIUPNPC_LIBS) $(EVENT_PTHREADS_LIBS) $(EVENT_LIBS) $(ZMQ_LIBS)
+401kcoind_LDADD += $(BOOST_LIBS) $(BDB_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(MINIUPNPC_LIBS) $(EVENT_PTHREADS_LIBS) $(EVENT_LIBS) $(ZMQ_LIBS)
 
-# helium-cli binary #
-helium_cli_SOURCES = bitcoin-cli.cpp
-helium_cli_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(EVENT_CFLAGS)
-helium_cli_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-helium_cli_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+# 401kcoin-cli binary #
+401kcoin_cli_SOURCES = bitcoin-cli.cpp
+401kcoin_cli_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(EVENT_CFLAGS)
+401kcoin_cli_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+401kcoin_cli_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
 
 if TARGET_WINDOWS
-helium_cli_SOURCES += bitcoin-cli-res.rc
+401kcoin_cli_SOURCES += bitcoin-cli-res.rc
 endif
 
-helium_cli_LDADD = \
+401kcoin_cli_LDADD = \
   $(LIBBITCOIN_CLI) \
   $(LIBUNIVALUE) \
   $(LIBBITCOIN_UTIL) \
   $(LIBBITCOIN_CRYPTO)
 
-helium_cli_LDADD += $(BOOST_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(EVENT_LIBS)
+401kcoin_cli_LDADD += $(BOOST_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(EVENT_LIBS)
 #
 
-# helium-tx binary #
-helium_tx_SOURCES = bitcoin-tx.cpp
-helium_tx_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
-helium_tx_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-helium_tx_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+# 401kcoin-tx binary #
+401kcoin_tx_SOURCES = bitcoin-tx.cpp
+401kcoin_tx_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
+401kcoin_tx_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+401kcoin_tx_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
 
 if TARGET_WINDOWS
-helium_tx_SOURCES += bitcoin-tx-res.rc
+401kcoin_tx_SOURCES += bitcoin-tx-res.rc
 endif
 
-helium_tx_LDADD = \
+401kcoin_tx_LDADD = \
   $(LIBUNIVALUE) \
   $(LIBBITCOIN_COMMON) \
   $(LIBBITCOIN_ZEROCOIN) \
@@ -487,7 +487,7 @@ helium_tx_LDADD = \
   $(LIBBITCOIN_CRYPTO) \
   $(LIBSECP256K1)
 
-helium_tx_LDADD += $(BOOST_LIBS) $(CRYPTO_LIBS)
+401kcoin_tx_LDADD += $(BOOST_LIBS) $(CRYPTO_LIBS)
 #
 
 # bitcoinconsensus library #
